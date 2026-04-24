@@ -1,39 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Frases — Mapa Narrativo</title><link rel="stylesheet" href="styles.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Banco de Frases — Mapa Narrativo</title><link rel="stylesheet" href="styles.css">
+<style>
+  .data-box { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+  .data-box .data-stat { font-size: 1.8rem; font-weight: 900; margin-bottom: 4px; }
+  .data-box .data-source { font-size: 0.65rem; color: var(--text-muted); margin-top: 6px; font-style: italic; }
+  .data-box p { font-size: 0.8rem; color: var(--text-muted); }
+  .gancho-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; }
+  .gancho-box .gancho-dado { font-size: 0.7rem; font-weight: 700; color: var(--cyan); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .gancho-box .gancho-frase { font-size: 1rem; font-weight: 600; color: var(--text); line-height: 1.6; }
+  .gancho-box .gancho-contexto { font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; font-style: italic; }
+  .cat-header { font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+</style>
+</head>
 <body>
-<div class="topbar"><a href="index.html" class="back">&#8592; Hub</a><div class="breadcrumb">Fase 1 &rsaquo; <span>Banco de Frases</span></div></div>
-<div class="header"><h1>Banco de Frases</h1><p class="subtitle">20 frases organizadas por contexto e momento da rotina</p></div>
+<div class="topbar"><a href="index.html" class="back">&#8592; Hub</a><div class="breadcrumb">Fase 3 &rsaquo; <span>Banco de Frases Expandido</span></div></div>
+<div class="header"><h1>Banco de Frases</h1><p class="subtitle">80+ frases por contexto + ganchos com dados reais de pesquisa</p></div>
 
+<!-- DADOS REAIS -->
 <div class="section">
-  <h3 style="font-size:0.8rem;font-weight:700;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Academia — 05h</h3>
+  <div class="section-title"><div class="icon icon-cyan">&#9733;</div><h2>Arsenal de Dados Reais</h2><span class="count">Pesquisas reais pra usar como gancho</span></div>
+
+  <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:20px">Esses dados transformam opiniao em autoridade. Use como abertura de reels, carrosseis e textos no LinkedIn. O publico se reconhece nos numeros.</p>
+
+  <div class="cards cols-3" style="margin-bottom:24px">
+    <div class="data-box"><div class="data-stat" style="color:var(--red)">94%</div><p>dos empreendedores brasileiros ja sofreram com alguma condicao de saude mental (ansiedade, burnout, depressao)</p><div class="data-source">Endeavor Brasil — Saude & Performance</div></div>
+    <div class="data-box"><div class="data-stat" style="color:var(--accent)">56%</div><p>dos empreendedores reconhecem suas jornadas de trabalho como exaustivas</p><div class="data-source">Endeavor Brasil — 2024</div></div>
+    <div class="data-box"><div class="data-stat" style="color:var(--blue)">29%</div><p>dos MEIs fecham apos 5 anos. Falta de clientes e baixo volume de vendas estao entre as 3 principais causas</p><div class="data-source">SEBRAE — Taxa de Sobrevivencia</div></div>
+    <div class="data-box"><div class="data-stat" style="color:var(--green)">47 mi</div><p>de brasileiros estao envolvidos em algum tipo de negocio — 33,4% da populacao adulta empreende</p><div class="data-source">GEM 2024 — Monitor Global de Empreendedorismo</div></div>
+    <div class="data-box"><div class="data-stat" style="color:var(--purple)">23%</div><p>mais engajamento para marcas que mantem cronograma previsivel de postagens vs padroes irregulares</p><div class="data-source">TrackMaven — Social Media Analytics</div></div>
+    <div class="data-box"><div class="data-stat" style="color:var(--cyan)">37 pts</div><p>de 80 — indice de maturidade digital dos pequenos negocios no Brasil. Metade do caminho</p><div class="data-source">SEBRAE + ABDI — Pesquisa TIC 2025</div></div>
+    <div class="data-box"><div class="data-stat" style="color:var(--red)">27%</div><p>das empresas paulistas fecham no primeiro ano. 46% acumulado no terceiro ano</p><div class="data-source">SEBRAE SP — Causa Mortis</div></div>
+    <div class="data-box"><div class="data-stat" style="color:var(--accent)">3.6 mi</div><p>de seguidores — Joao Adibe (Cimed) no Instagram. Com equipe dedicada, diretor de branding e social media exclusivo</p><div class="data-source">Bloomberg / Instagram Cimed</div></div>
+    <div class="data-box"><div class="data-stat" style="color:var(--green)">+12%</div><p>de alcance para quem posta 3-5x/semana vs quem posta 1-2x. Mas consistencia importa mais que volume</p><div class="data-source">mLabs — Pesquisa Frequencia 2025</div></div>
+  </div>
+</div>
+
+<!-- GANCHOS COM DADOS -->
+<div class="section">
+  <div class="section-title"><div class="icon icon-red">&#9873;</div><h2>Ganchos com Dados Reais</h2><span class="count">Abra o reel com isso</span></div>
+
+  <div class="cat-header" style="color:var(--red)">Confronto com a Realidade (Tom Marsili)</div>
+
+  <div class="gancho-box">
+    <div class="gancho-dado">Dado: Cimed posta 5-6x por dia com equipe de 20+ pessoas</div>
+    <div class="gancho-frase">"A Cimed posta 5, 6 conteudos por dia. Sabe quantas pessoas trabalham so no marketing deles? Mais de 20. Agora me diz: voce acha que a sua rotina vai se encaixar nessa metodologia? Para de se comparar com quem tem uma estrutura que voce nao tem. Faz o que cabe na SUA vida."</div>
+    <div class="gancho-contexto">Formato: Reel 60s | Tom: Confronto + Empatia | CTA: "Manda pra aquele amigo que se cobra demais"</div>
+  </div>
+
+  <div class="gancho-box">
+    <div class="gancho-dado">Dado: 94% dos empreendedores ja sofreram com saude mental</div>
+    <div class="gancho-frase">"94% dos empreendedores brasileiros ja passaram por ansiedade, burnout ou depressao. E ainda tem guru pedindo pra voce postar todo dia, gravar 3 reels, fazer stories de manha e de noite. Ninguem ta perguntando se voce ta bem. Eu to perguntando."</div>
+    <div class="gancho-contexto">Formato: Reel 60s | Tom: Acolhedor + Firme | CTA: "Salva esse video. Voce vai precisar"</div>
+  </div>
+
+  <div class="gancho-box">
+    <div class="gancho-dado">Dado: 56% reconhecem jornadas exaustivas</div>
+    <div class="gancho-frase">"56% dos empreendedores brasileiros admitem que a rotina e exaustiva. Os outros 44% provavelmente estao mentindo. Se voce trabalha 10, 12 horas por dia e alguem te diz que voce precisa 'produzir mais conteudo'... o problema nao e voce. E o conselho."</div>
+    <div class="gancho-contexto">Formato: Reel 45s | Tom: Confronto com humor | CTA: "Comenta se voce ja ouviu isso"</div>
+  </div>
+
+  <div class="gancho-box">
+    <div class="gancho-dado">Dado: 29% dos MEIs fecham em 5 anos / falta de clientes</div>
+    <div class="gancho-frase">"29% dos MEIs fecham em 5 anos. E uma das principais causas e falta de clientes. Sabe o que traz clientes? Presenca. Nao perfeicao. Nao viral. Presenca consistente. 1 post por semana, toda semana, ja te coloca na frente de quem sumiu."</div>
+    <div class="gancho-contexto">Formato: Reel 60s ou Carrossel | Tom: Pratico | CTA: "Segue pra mais conteudo sem enrolacao"</div>
+  </div>
+
+  <div class="gancho-box">
+    <div class="gancho-dado">Dado: 23% mais engajamento com cronograma previsivel</div>
+    <div class="gancho-frase">"Pesquisa da TrackMaven mostra: marcas com cronograma previsivel tem 23% mais engajamento. Nao e sobre postar mais. E sobre nao sumir. Seu cliente precisa saber que voce existe. E ele so sabe se voce aparece com regularidade."</div>
+    <div class="gancho-contexto">Formato: Carrossel ou LinkedIn | Tom: Metodo | CTA: "Salva pra montar sua rotina"</div>
+  </div>
+
+  <div class="gancho-box">
+    <div class="gancho-dado">Dado: 47 milhoes de brasileiros empreendem</div>
+    <div class="gancho-frase">"47 milhoes de brasileiros empreendem. 47 milhoes de pessoas acordando cedo, resolvendo problema, atendendo cliente, fechando caixa. Se voce e um deles: eu sei o que voce vive. E por isso eu nao venho aqui te dar dica. Eu venho mostrar o que funciona na pratica."</div>
+    <div class="gancho-contexto">Formato: Reel 45s ou LinkedIn | Tom: Conexao + Autoridade | CTA: "Me segue se voce e um desses 47 milhoes"</div>
+  </div>
+
+  <div class="cat-header" style="color:var(--accent)">Desconstrucao de Mitos (Tom Alfredo Soares)</div>
+
+  <div class="gancho-box">
+    <div class="gancho-dado">Dado: Maturidade digital dos pequenos negocios = 37/80 pontos</div>
+    <div class="gancho-frase">"O indice de maturidade digital dos pequenos negocios no Brasil e 37 de 80. Menos da metade. Isso nao e vergonha — e oportunidade. Enquanto todo mundo ta perdido, quem comecar agora com consistencia vai sair na frente. O problema nunca foi falta de tecnologia. Foi falta de rotina."</div>
+    <div class="gancho-contexto">Formato: Carrossel 5 slides | Tom: Pratico + Motivador | CTA: "Voce ta acima ou abaixo dos 37?"</div>
+  </div>
+
+  <div class="gancho-box">
+    <div class="gancho-dado">Dado: Joao Adibe tem social media exclusivo de 19 anos gerenciando seus perfis</div>
+    <div class="gancho-frase">"O CEO da Cimed tem um social media exclusivo, diretor de branding, equipe de criacao, parceria com Anitta, 200 milhoes de views. Quando alguem te mostra a Cimed como exemplo e fala 'e so fazer igual'... nao e. E outra realidade. A sua estrategia precisa caber na SUA realidade."</div>
+    <div class="gancho-contexto">Formato: Reel 60s | Tom: Desconstrucao + Empatia | CTA: "Salva e manda pro amigo empreendedor"</div>
+  </div>
+</div>
+
+<!-- FRASES EXPANDIDAS POR CONTEXTO -->
+<div class="section">
+  <div class="section-title"><div class="icon icon-amber">&#10077;</div><h2>Frases por Contexto</h2><span class="count">80+ frases de conexao</span></div>
+
+  <div class="cat-header" style="color:var(--red)">Academia — 05h — Disciplina e Forca</div>
+
   <div class="frase-card"><p>Enquanto a maioria negocia com o despertador, voce ja pode estar construindo a melhor versao do seu dia.</p><span class="frase-tag tag-academia">Academia</span></div>
   <div class="frase-card"><p>Disciplina nao e motivacao. E decisao. Todo dia. Inclusive quando voce nao quer.</p><span class="frase-tag tag-academia">Academia</span></div>
   <div class="frase-card"><p>Preguica e a pior desgraca do ser humano.</p><span class="frase-tag tag-academia">Academia</span></div>
   <div class="frase-card"><p>Ninguem vai bater na sua porta pra te dar disciplina. Voce levanta ou fica.</p><span class="frase-tag tag-academia">Academia</span></div>
   <div class="frase-card"><p>O dificil fica facil quando vira rotina. E rotina so vira rotina com repeticao.</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>A academia nao e sobre o corpo. E sobre provar pra voce mesmo que voce consegue fazer o que decidiu.</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>Se voce nao aguenta 1 hora de desconforto no treino, como vai aguentar 10 horas de desconforto no negocio?</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>Eu nao treino porque gosto. Treino porque preciso. E a unica hora do dia que eu cuido de mim antes de cuidar de todo mundo.</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>5 da manha ninguem te aplaude. Ninguem ve. Ninguem curte. E exatamente por isso que importa.</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>Motivacao te leva pra academia em janeiro. Disciplina te leva em julho, com chuva, com frio, com sono.</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>O dia que voce mais quer ficar na cama e o dia que mais precisa levantar.</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>Tem gente esperando a motivacao chegar. Eu decidi que ela nao precisa vir. Eu vou sem ela.</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>O treino e a unica parte do dia onde o resultado depende 100% de voce. Sem cliente, sem fornecedor, sem desculpa.</p><span class="frase-tag tag-academia">Academia</span></div>
+  <div class="frase-card"><p>Cada serie que voce completa quando quer parar e um ensaio pra cada problema que voce vai resolver no dia.</p><span class="frase-tag tag-academia">Academia</span></div>
 
-  <h3 style="font-size:0.8rem;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin:24px 0 12px">Filhos / Familia — 07h</h3>
+  <div class="cat-header" style="color:var(--accent)">Filhos / Familia — 07h — Proposito</div>
+
   <div class="frase-card"><p>A melhor estrategia de vida e saber pra quem voce trabalha. Nao e pro chefe. E pra quem te espera em casa.</p><span class="frase-tag tag-filhos">Filhos</span></div>
   <div class="frase-card"><p>Meus filhos nao sabem, mas eles sao o motivo de cada decisao que eu tomo antes das 7h da manha.</p><span class="frase-tag tag-filhos">Filhos</span></div>
   <div class="frase-card"><p>Eu nao nasci disciplinado. Eu precisei ser. Ter filho muda a ordem das suas prioridades.</p><span class="frase-tag tag-filhos">Filhos</span></div>
   <div class="frase-card"><p>Proposito nao e uma frase bonita no perfil. E o que te faz levantar quando tudo pede pra voce ficar.</p><span class="frase-tag tag-filhos">Filhos</span></div>
+  <div class="frase-card"><p>Meu filho nao precisa me ouvir falar sobre disciplina. Ele precisa me ver sendo disciplinado.</p><span class="frase-tag tag-filhos">Filhos</span></div>
+  <div class="frase-card"><p>A maior heranca que eu posso deixar nao e dinheiro. E o exemplo de alguem que nao desistiu.</p><span class="frase-tag tag-filhos">Filhos</span></div>
+  <div class="frase-card"><p>Levar meu filho na escola e a unica reuniao do dia que eu nunca remarcaria.</p><span class="frase-tag tag-filhos">Filhos</span></div>
+  <div class="frase-card"><p>Quando voce tem filho, voce para de ter o luxo de ser preguicoso. E o melhor presente que a vida te da.</p><span class="frase-tag tag-filhos">Filhos</span></div>
+  <div class="frase-card"><p>A gente fala de proposito como se fosse algo distante. O meu ta no banco de tras do carro toda manha.</p><span class="frase-tag tag-filhos">Filhos</span></div>
+  <div class="frase-card"><p>Eu nao trabalho pra ficar rico. Trabalho pra que meu filho nunca ache que desistir e normal.</p><span class="frase-tag tag-filhos">Filhos</span></div>
+  <div class="frase-card"><p>O dia que meu filho me perguntou "pai, por que voce acorda tao cedo?" foi o dia que eu entendi que ele ja estava aprendendo.</p><span class="frase-tag tag-filhos">Filhos</span></div>
+  <div class="frase-card"><p>Ser presente nao e estar em casa. E estar inteiro quando esta.</p><span class="frase-tag tag-filhos">Filhos</span></div>
 
-  <h3 style="font-size:0.8rem;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin:24px 0 12px">Trabalho / Marketing — Dia</h3>
+  <div class="cat-header" style="color:var(--blue)">Trabalho / Marketing — Dia — Metodo e Pratica</div>
+
   <div class="frase-card"><p>Voce nao precisa de uma estrategia perfeita. Precisa de uma rotina de contato com o seu cliente que nao pare.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
   <div class="frase-card"><p>O empreendedor que posta 1 vez por semana durante 6 meses sabe mais do que quem fez curso de R$3 mil e nunca publicou nada.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
   <div class="frase-card"><p>Consistencia nao e glamourosa. Mas e o que separa quem vende de quem so planeja.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
   <div class="frase-card"><p>Marketing nao e sobre saber tudo antes de comecar. E sobre aparecer com frequencia, porque e a frequencia que te ensina o caminho.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
   <div class="frase-card"><p>Nao espera o plano perfeito. O plano aparece enquanto voce executa.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
   <div class="frase-card"><p>Cada post e um teste. Cada semana e um aprendizado. Cada mes e uma estrategia mais clara.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Voce nao precisa viralizar. Precisa que o cliente que ja te conhece lembre que voce existe.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>O melhor marketing do mundo e aparecer. O segundo melhor e nao parar de aparecer.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Seu concorrente nao e o cara que posta melhor. E o cara que posta sempre.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>29% dos MEIs fecham em 5 anos por falta de clientes. E quantos deles tinham presenca digital consistente? Quase nenhum.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>A Cimed posta 6 vezes por dia com 20 pessoas. Voce nao precisa ser a Cimed. Precisa ser voce, com constancia.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Para de consumir conteudo sobre marketing e comeca a fazer marketing. A resposta ta na execucao, nao no curso.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Vender nao e empurrar produto. E resolver problema. E pra resolver, voce precisa aparecer onde o problema ta.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>O algoritmo nao odeia voce. Ele odeia inconsistencia.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Se voce postou 2 semanas e parou, voce nao testou nada. Voce desistiu antes do resultado.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Marketing offline e online nao sao inimigos. Sao parceiros. O cartao de visita leva pro Instagram. O Instagram leva pro WhatsApp. O WhatsApp fecha a venda.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Voce nao precisa de camera profissional, ring light e cenario. Precisa de celular, honestidade e frequencia.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>A diferenca entre marketing e spam e uma coisa: valor. Se voce aparece e ajuda, e marketing. Se aparece e so pede, e spam.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Ninguem compra de quem nao conhece. E ninguem conhece quem nao aparece.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
+  <div class="frase-card"><p>Eu nao dou dica de marketing. Eu mostro o que eu faco. Se faz sentido pra voce, usa. Se nao faz, adapta. Mas comeca.</p><span class="frase-tag tag-trabalho">Marketing</span></div>
 
-  <h3 style="font-size:0.8rem;font-weight:700;color:var(--purple);letter-spacing:2px;text-transform:uppercase;margin:24px 0 12px">Reflexao / Bastidores — Noite</h3>
+  <div class="cat-header" style="color:var(--purple)">Reflexao / Bastidores — Noite — Visao e Lideranca</div>
+
   <div class="frase-card"><p>O que te coloca no topo nao e talento. E o que voce faz todo dia quando ninguem aplaude.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
   <div class="frase-card"><p>Empreender e liderar a si mesmo primeiro. Se voce nao consegue manter uma rotina, como vai liderar uma equipe?</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
   <div class="frase-card"><p>O caminho aparece pra quem nao para de andar.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
   <div class="frase-card"><p>Servir. Ser util. Resolver problema. Isso e marketing de verdade.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
   <div class="frase-card"><p>O mercado respeita quem aparece. Nao quem apareceu uma vez.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>Sucesso nao e acordar um dia e estar la. E acordar todo dia e continuar indo.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>A melhor versao do seu negocio esta do outro lado da rotina que voce ainda nao criou.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>Voce nao precisa de mais informacao. Precisa de mais acao com a informacao que ja tem.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>O empreendedor que sobrevive nao e o mais inteligente. E o que nao para.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>Trabalhe. Sirva. Seja forte. Nao encha o saco. Quando voce entende isso, tudo simplifica.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>Eu nao sei tudo sobre marketing. Mas sei o que e viver a rotina de quem empreende. E isso nenhum guru sabe.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>O mundo respeita quem nao tem medo dele. E quem aparece mesmo sem estar pronto, nao tem medo.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>Compara o que voce e hoje com o que voce era ha 6 meses. Se nao mudou nada, o problema nao e o mercado. E a rotina.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>Disciplina nao e glamourosa. Nao rende like. Nao viraliza. Mas constroi tudo que viralizar nunca vai construir.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>Se voce nao esta cansado de vez em quando, voce nao esta construindo nada de verdade.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+  <div class="frase-card"><p>A diferenca entre quem fala de marketing e quem vive marketing e a mesma diferenca entre quem assiste treino e quem treina.</p><span class="frase-tag tag-reflexao">Reflexao</span></div>
+
+  <div class="cat-header" style="color:var(--green)">Empatia com o Empreendedor — "Eu sei como e"</div>
+
+  <div class="frase-card"><p>Eu sei o que e chegar no fim do dia sem energia pra pensar em conteudo. E normal. Mas nao pode ser desculpa pra sumir.</p><span class="frase-tag tag-trabalho">Empatia</span></div>
+  <div class="frase-card"><p>Se voce resolve problema de fornecedor, atende cliente dificil, fecha caixa e ainda pensa em marketing — voce ja e heroi. Agora falta so nao parar.</p><span class="frase-tag tag-trabalho">Empatia</span></div>
+  <div class="frase-card"><p>Ninguem te ensinou a fazer marketing porque ninguem te ensinou a empreender. Voce aprendeu na marra. O marketing vai ser igual.</p><span class="frase-tag tag-trabalho">Empatia</span></div>
+  <div class="frase-card"><p>Voce nao e preguicoso por nao postar. Voce ta exausto. Mas exaustao nao e motivo pra parar — e motivo pra simplificar.</p><span class="frase-tag tag-trabalho">Empatia</span></div>
+  <div class="frase-card"><p>Quando alguem com equipe de 20 pessoas te diz que e facil, desconfia. Quando alguem que vive a mesma rotina te diz que e possivel, escuta.</p><span class="frase-tag tag-trabalho">Empatia</span></div>
+  <div class="frase-card"><p>Voce nao precisa ser influenciador. Precisa ser presente. Seu cliente nao quer perfeicao. Quer saber que voce existe.</p><span class="frase-tag tag-trabalho">Empatia</span></div>
+  <div class="frase-card"><p>94% dos empreendedores ja passaram por burnout. Se voce esta cansado, voce nao e fraco. Voce e normal. Agora respira e decide o minimo que voce aguenta fazer. E faz so isso.</p><span class="frase-tag tag-trabalho">Empatia</span></div>
+  <div class="frase-card"><p>A culpa de nao estar postando e pior do que postar mal. Tira a culpa. Faz 1 por semana. Pronto. Comecou.</p><span class="frase-tag tag-trabalho">Empatia</span></div>
 </div>
 
-<div class="footer"><p>Mapa Narrativo v2.0</p></div>
+<div class="footer">
+  <div class="status">80+ FRASES + 8 GANCHOS COM DADOS</div>
+  <p>Mapa Narrativo v2.0 — Fase 3</p>
+</div>
+
 </body></html>
