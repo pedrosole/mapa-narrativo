@@ -1,131 +1,528 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Roteiros — Mapa Narrativo</title><link rel="stylesheet" href="styles.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Roteiros — Mapa Narrativo</title><link rel="stylesheet" href="styles.css">
+<style>
+  .roteiro-completo {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .roteiro-completo::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .roteiro-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .roteiro-meta span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+  .meta-formato { background: rgba(239,68,68,0.15); color: var(--red); }
+  .meta-pilar { background: var(--accent-glow); color: var(--accent); }
+  .meta-tom { background: rgba(139,92,246,0.15); color: var(--purple); }
+  .meta-duracao { background: rgba(6,182,212,0.15); color: var(--cyan); }
+  .roteiro-titulo { font-size: 1.05rem; font-weight: 700; margin-bottom: 16px; }
+  .roteiro-bloco {
+    background: var(--surface-2);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 8px;
+  }
+  .roteiro-bloco .bloco-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .roteiro-bloco .bloco-tempo {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    float: right;
+  }
+  .roteiro-bloco .bloco-fala {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.8;
+    font-style: italic;
+  }
+  .roteiro-bloco .bloco-direcao {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  .roteiro-cta {
+    background: var(--surface-3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 8px;
+  }
+  .roteiro-cta .cta-label { font-size: 0.6rem; font-weight: 700; color: var(--accent); letter-spacing: 2px; margin-bottom: 4px; }
+  .roteiro-cta p { font-size: 0.8rem; color: var(--text-muted); }
+  .gancho-grid { display: grid; gap: 8px; }
+  .gancho-item {
+    background: var(--surface-2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    color: var(--text);
+    border-left: 3px solid;
+  }
+  .gancho-item .gancho-tipo { font-size: 0.6rem; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px; }
+  .section-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.7; }
+</style>
+</head>
 <body>
 <div class="topbar"><a href="index.html" class="back">&#8592; Hub</a><div class="breadcrumb">Fase 2 &rsaquo; <span>Frameworks de Roteiro</span></div></div>
-<div class="header"><h1>Frameworks de Roteiro</h1><p class="subtitle">Abra, escolha o formato, grave</p></div>
+<div class="header"><h1>Frameworks de Roteiro</h1><p class="subtitle">Estruturas + modelos de gancho + roteiros completos prontos pra gravar</p></div>
 
+<!-- ==================== -->
+<!-- FRAMEWORK 1: REEL -->
+<!-- ==================== -->
 <div class="section">
+  <div class="section-title"><div class="icon icon-red">&#9654;</div><h2>Framework 01 — Reel / TikTok</h2><span class="count">60-90 segundos</span></div>
+  <p class="section-desc">O formato principal. Gera alcance, autoridade e traz gente nova. A estrutura e sempre a mesma: para o scroll, gera identificacao, entrega a virada e fecha com forca.</p>
 
-  <div class="bandeira" style="border-left-color:var(--red);margin-bottom:24px">
-    <div class="num">FRAMEWORK 01 — REEL / TIKTOK (60-90s)</div>
-    <h3>GANCHO &#8594; CONFLITO &#8594; VIRADA &#8594; CHAMADA</h3>
-    <div style="margin-top:16px;display:grid;gap:12px">
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--red);letter-spacing:2px">1. GANCHO (3 segundos)</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">A frase que para o scroll. Comece DIRETO na mensagem. Nunca "oi pessoal".</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Modelos de gancho:<br>&#8226; "Voce esta fazendo [coisa] errado e nem sabe."<br>&#8226; "Ninguem te fala isso sobre [assunto]."<br>&#8226; "Eu levanto as 5h todo dia. E nao e por motivacao."<br>&#8226; "Sabe por que seu marketing nao funciona?"<br>&#8226; "Para de [erro comum]. Faz [alternativa] em vez disso."<br>&#8226; "[Numero] [coisas] que eu aprendi [fazendo algo]."<br>&#8226; "A verdade que nenhum guru te conta sobre [assunto]."</div>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--accent);letter-spacing:2px">2. CONFLITO (15-20 segundos)</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">O problema real. Descreva a dor que o empreendedor sente. Mostre que voce conhece a rotina dele.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Exemplo: "Voce trabalha o dia inteiro, chega em casa destruido, e ainda tem gente dizendo que voce precisa postar 3 vezes por dia. Ai voce posta 2 semanas, cansa, para, e sente culpa."</div>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:2px">3. VIRADA (20-30 segundos)</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Sua perspectiva. A solucao real. Conecte com sua tese e sua experiencia vivida.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Exemplo: "O problema nao e voce. E que te ensinaram errado. Frequencia nao e quantidade. E compromisso. Define 1 vez por semana e segue. Em 3 meses voce vai saber mais do que qualquer curso te ensina."</div>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--blue);letter-spacing:2px">4. CHAMADA (5-10 segundos)</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Feche com acao OU reflexao. Nunca "compre".</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Modelos:<br>&#8226; "Se isso fez sentido, salva pra lembrar."<br>&#8226; "Manda pra aquele amigo empreendedor que precisa ouvir isso."<br>&#8226; "Comenta aqui: voce ja passou por isso?"<br>&#8226; "Me segue pra mais conteudo sem enrolacao."<br>&#8226; Ou fecha com frase forte sem pedir nada. Silencio > CTA fraco.</div>
-      </div>
+  <div class="bandeira" style="border-left-color:var(--red)">
+    <div class="num">ESTRUTURA</div>
+    <h3>GANCHO (3s) &#8594; CONFLITO (15-20s) &#8594; VIRADA (20-30s) &#8594; CHAMADA (5-10s)</h3>
+  </div>
+
+  <!-- Ganchos expandidos -->
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--red);letter-spacing:2px;margin:24px 0 12px">18 MODELOS DE GANCHO</h3>
+  <p class="section-desc">Os primeiros 3 segundos sao 80% do jogo. Nunca comece com "oi pessoal". Comece com uma frase que PARA o scroll.</p>
+
+  <div class="gancho-grid">
+    <div class="gancho-item" style="border-color:var(--red)"><div class="gancho-tipo">Confronto com dado</div>"94% dos empreendedores ja sofreram com burnout. E ainda tem gente pedindo pra voce postar todo dia."</div>
+    <div class="gancho-item" style="border-color:var(--red)"><div class="gancho-tipo">Confronto com dado</div>"A Cimed posta 6 vezes por dia. Com equipe de 20 pessoas. Voce acha que sua rotina cabe nisso?"</div>
+    <div class="gancho-item" style="border-color:var(--red)"><div class="gancho-tipo">Confronto com dado</div>"29% dos MEIs fecham em 5 anos. Uma das maiores causas? Falta de clientes. Nao falta de produto."</div>
+    <div class="gancho-item" style="border-color:var(--accent)"><div class="gancho-tipo">Desconstrucao</div>"Para de assistir curso de marketing. Comeca a fazer marketing."</div>
+    <div class="gancho-item" style="border-color:var(--accent)"><div class="gancho-tipo">Desconstrucao</div>"Ninguem te fala isso: voce nao precisa de estrategia. Precisa de rotina."</div>
+    <div class="gancho-item" style="border-color:var(--accent)"><div class="gancho-tipo">Desconstrucao</div>"Postar todo dia nao e estrategia. E exaustao disfarçada de disciplina."</div>
+    <div class="gancho-item" style="border-color:var(--blue)"><div class="gancho-tipo">Pergunta direta</div>"Sabe por que seu marketing nao funciona? Nao e porque voce posta pouco. E porque voce para."</div>
+    <div class="gancho-item" style="border-color:var(--blue)"><div class="gancho-tipo">Pergunta direta</div>"Quantas vezes voce comecou a postar, durou 2 semanas e parou?"</div>
+    <div class="gancho-item" style="border-color:var(--blue)"><div class="gancho-tipo">Pergunta direta</div>"Voce trabalha 10 horas por dia e alguem te diz que precisa gravar 3 reels. Faz sentido?"</div>
+    <div class="gancho-item" style="border-color:var(--green)"><div class="gancho-tipo">Revelacao pessoal</div>"Eu levanto as 5h todo dia. E nao e por motivacao."</div>
+    <div class="gancho-item" style="border-color:var(--green)"><div class="gancho-tipo">Revelacao pessoal</div>"Minha disciplina nao veio de livro. Veio de ter filho."</div>
+    <div class="gancho-item" style="border-color:var(--green)"><div class="gancho-tipo">Revelacao pessoal</div>"Eu parei de dar dicas. E meu conteudo comecou a funcionar."</div>
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Opiniao forte</div>"Preguica e a pior desgraca do ser humano."</div>
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Opiniao forte</div>"A maioria dos conselhos de marketing nao serve pra quem empreende de verdade."</div>
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Opiniao forte</div>"O algoritmo nao odeia voce. Ele odeia inconsistencia."</div>
+    <div class="gancho-item" style="border-color:var(--cyan)"><div class="gancho-tipo">Numero + curiosidade</div>"3 coisas que eu faco todo dia antes das 7h que mudaram meu negocio."</div>
+    <div class="gancho-item" style="border-color:var(--cyan)"><div class="gancho-tipo">Numero + curiosidade</div>"1 post por semana durante 6 meses me ensinou mais do que qualquer curso."</div>
+    <div class="gancho-item" style="border-color:var(--cyan)"><div class="gancho-tipo">Numero + curiosidade</div>"23% mais engajamento. Sabe o que essas marcas fizeram? Nao postaram mais. Nao pararam."</div>
+  </div>
+
+  <!-- Roteiros completos Reel -->
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--red);letter-spacing:2px;margin:32px 0 16px">ROTEIROS COMPLETOS — PRONTO PRA GRAVAR</h3>
+
+  <div class="roteiro-completo" style="border-top:3px solid var(--red)">
+    <div class="roteiro-meta">
+      <span class="meta-formato">Reel 60s</span>
+      <span class="meta-pilar">Metodo</span>
+      <span class="meta-tom">Confronto + Empatia</span>
+      <span class="meta-duracao">Selfie-made: academia ou carro</span>
+    </div>
+    <div class="roteiro-titulo">"A Cimed vs. Voce"</div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Gancho</div><div class="bloco-tempo">0-3s</div>
+      <div class="bloco-fala">"A Cimed posta 5, 6 conteudos por dia. Sabe quantas pessoas trabalham so no marketing deles?"</div>
+      <div class="bloco-direcao">Olhe direto na camera. Fale rapido. Sem sorriso. Tom serio.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--accent)">Conflito</div><div class="bloco-tempo">3-20s</div>
+      <div class="bloco-fala">"Mais de 20. Diretor de branding, social media exclusivo, parceria com Anitta, 200 milhoes de views. Ai alguem te mostra um reel da Cimed e fala: 'e so fazer igual'. Voce, que trabalha 10, 12 horas por dia, que resolve problema de fornecedor, atende cliente, fecha caixa... voce vai fazer igual a quem tem uma equipe inteira?"</div>
+      <div class="bloco-direcao">Desacelere na parte "voce, que trabalha...". Conte a rotina com peso. O publico precisa se reconhecer.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Virada</div><div class="bloco-tempo">20-50s</div>
+      <div class="bloco-fala">"Para de se comparar com quem tem uma estrutura que voce nao tem. A sua estrategia precisa caber na SUA realidade. Define um ritmo — que seja 1 post por semana — e segue. Sem parar. Em 3 meses voce vai saber mais sobre o SEU cliente do que qualquer agencia."</div>
+      <div class="bloco-direcao">Mude o tom pra firme mas acolhedor. E a solucao. Fale com convicao, nao com raiva.</div>
+    </div>
+    <div class="roteiro-cta">
+      <div class="cta-label">Chamada</div>
+      <p>"Manda esse video pra aquele amigo empreendedor que se cobra demais." — ou feche com: "O caminho aparece pra quem nao para de andar." (silencio, corta)</p>
     </div>
   </div>
 
-  <div class="bandeira" style="border-left-color:var(--accent);margin-bottom:24px">
-    <div class="num">FRAMEWORK 02 — SEQUENCIA DE STORIES (3-7 stories)</div>
-    <h3>CENA &#8594; CONTEXTO &#8594; MENSAGEM &#8594; INTERACAO</h3>
-    <div style="margin-top:16px;display:grid;gap:12px">
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--red);letter-spacing:2px">STORY 1-2: A CENA</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Mostra onde voce esta. Sem fala, sem texto pesado. Raw.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Ex: Video da academia escura, 5h. Ou no carro levando os filhos.</div>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--accent);letter-spacing:2px">STORY 3-4: O CONTEXTO</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Fale 15-30s conectando o momento com uma reflexao. Tom natural, como se falasse com um amigo.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Ex: "Sabe por que eu to aqui 5h? Nao e motivacao. E porque eu decidi que essa e a hora que eu cuido de mim antes de cuidar de tudo."</div>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:2px">STORY 5-6: A MENSAGEM</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">A ponte pro marketing/negocio. Conecta o momento pessoal com a licao profissional.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Ex: "Seu marketing funciona igual. Nao precisa de plano genial. Precisa de uma rotina que nao pare."</div>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--blue);letter-spacing:2px">STORY 7: INTERACAO (opcional)</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Enquete, caixinha de perguntas, ou pergunta direta.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Ex: Enquete "Voce tem uma rotina de conteudo?" SIM / QUERO TER</div>
-      </div>
+  <div class="roteiro-completo" style="border-top:3px solid var(--accent)">
+    <div class="roteiro-meta">
+      <span class="meta-formato">Reel 45s</span>
+      <span class="meta-pilar">Rotina</span>
+      <span class="meta-tom">Firme (Marsili)</span>
+      <span class="meta-duracao">Selfie-made: academia 5h</span>
+    </div>
+    <div class="roteiro-titulo">"5h da Manha"</div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Gancho</div><div class="bloco-tempo">0-3s</div>
+      <div class="bloco-fala">"Eu levanto as 5h todo dia. E nao e por motivacao."</div>
+      <div class="bloco-direcao">Grave no espelho da academia ou no caminho. Escuro. Raw. Sem filtro.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--accent)">Conflito</div><div class="bloco-tempo">3-15s</div>
+      <div class="bloco-fala">"Motivacao e igual Wi-Fi de hotel: funciona as vezes, cai quando voce mais precisa. Eu nao espero motivacao. Eu tomei uma decisao e sigo ela. Todo dia. Com sono, com frio, sem vontade."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Virada</div><div class="bloco-tempo">15-35s</div>
+      <div class="bloco-fala">"Quando eu tive filhos, eu entendi que a bagunca nao era mais opcao. Se tem alguem que depende de voce, voce organiza a vida ou a vida te engole. A academia e o primeiro ato do dia que prova pra mim mesmo que eu tenho controle. O resto do dia fica mais facil depois disso."</div>
+      <div class="bloco-direcao">Baixe o tom na parte dos filhos. E o momento vulneravel. Depois volte firme em "o resto do dia fica mais facil".</div>
+    </div>
+    <div class="roteiro-cta">
+      <div class="cta-label">Chamada</div>
+      <p>"Se isso fez sentido, salva. Voce vai precisar num dia que nao quiser levantar." — ou fecha com silencio apos a ultima frase.</p>
     </div>
   </div>
 
-  <div class="bandeira" style="border-left-color:var(--green);margin-bottom:24px">
-    <div class="num">FRAMEWORK 03 — CARROSSEL INSTAGRAM (5-7 slides)</div>
-    <h3>CAPA &#8594; PROBLEMA &#8594; PASSOS &#8594; FRASE FINAL</h3>
-    <div style="margin-top:16px;display:grid;gap:12px">
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--red);letter-spacing:2px">SLIDE 1: CAPA</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Titulo forte, curto, que gere curiosidade.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Ex: "3 coisas que eu faco todo dia que mudaram meu marketing"<br>Ex: "Por que 1x por semana e melhor que todo dia"<br>Ex: "O que a academia me ensinou sobre vender"</div>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--accent);letter-spacing:2px">SLIDE 2: O PROBLEMA</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Descreva a dor do empreendedor em 2-3 frases curtas. Gere identificacao.</p>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:2px">SLIDES 3-5: OS PASSOS</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">1 ideia por slide. Frases curtas. Maximo 3 linhas. Use numeracao.</p>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--blue);letter-spacing:2px">SLIDE 6-7: FRASE FINAL + CTA</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Frase forte do banco de frases. Ultimo slide: "Salva e manda pra quem precisa" + seu @.</p>
-      </div>
+  <div class="roteiro-completo" style="border-top:3px solid var(--green)">
+    <div class="roteiro-meta">
+      <span class="meta-formato">Reel 60s</span>
+      <span class="meta-pilar">Descoberta</span>
+      <span class="meta-tom">Pratico (Alfredo)</span>
+      <span class="meta-duracao">Selfie-made: escritorio/trabalho</span>
+    </div>
+    <div class="roteiro-titulo">"29% Fecham"</div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Gancho</div><div class="bloco-tempo">0-3s</div>
+      <div class="bloco-fala">"29% dos MEIs fecham em 5 anos. E uma das maiores causas nao e falta de dinheiro."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--accent)">Conflito</div><div class="bloco-tempo">3-20s</div>
+      <div class="bloco-fala">"E falta de clientes. O produto e bom. O atendimento e bom. Mas ninguem sabe que o negocio existe. Porque o empreendedor esta tao ocupado trabalhando DENTRO do negocio que esquece de trabalhar a presenca do negocio la fora."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Virada</div><div class="bloco-tempo">20-50s</div>
+      <div class="bloco-fala">"Presenca nao e perfeicao. Nao e viralizar. E consistencia. Pesquisa mostra que marcas com cronograma previsivel tem 23% mais engajamento. Nao porque postam mais. Porque nao somem. Voce nao precisa de agencia. Precisa de 1 post por semana, toda semana, durante 6 meses. O cliente comeca a te ver. E quem e visto, e lembrado."</div>
+      <div class="bloco-direcao">Fale como se estivesse explicando pra um amigo. Sem tom de palco. Pratico, direto.</div>
+    </div>
+    <div class="roteiro-cta">
+      <div class="cta-label">Chamada</div>
+      <p>"Segue pra mais conteudo sem enrolacao. Aqui eu nao dou dica — eu mostro o que funciona."</p>
     </div>
   </div>
 
-  <div class="bandeira" style="border-left-color:var(--purple);margin-bottom:24px">
-    <div class="num">FRAMEWORK 04 — TEXTO LINKEDIN</div>
-    <h3>ABERTURA FORTE &#8594; HISTORIA &#8594; LICAO &#8594; FECHAMENTO</h3>
-    <div style="margin-top:16px;display:grid;gap:12px">
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--red);letter-spacing:2px">LINHA 1-2: ABERTURA</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">As 2 primeiras linhas aparecem antes do "ver mais". Precisam ser irresistiveis.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">&#8226; "Hoje eu quase nao levantei as 5h."<br>&#8226; "Meu filho me perguntou por que eu acordo tao cedo."<br>&#8226; "O melhor conselho de marketing nao veio de um marketeiro."<br>&#8226; "Eu parei de dar dicas. E meu engajamento triplicou."</div>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--accent);letter-spacing:2px">CORPO: A HISTORIA</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Conte o que aconteceu. Frases curtas. Pule linha a cada 1-2 frases. LinkedIn premia texto escaneavel.</p>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:2px">LICAO</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Conecte a historia com o aprendizado. Uma unica frase clara.</p>
-      </div>
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <div style="font-size:0.65rem;font-weight:700;color:var(--blue);letter-spacing:2px">FECHAMENTO</div>
-        <p style="font-size:0.85rem;color:var(--text);margin-top:4px">Pergunta que gera comentario OU frase forte que fecha sem pedir nada.</p>
-        <div style="margin-top:8px;font-size:0.8rem;color:var(--text-muted);font-style:italic">Ex: "E voce? Tem uma rotina ou esta improvisando?"<br>Ex: "Disciplina nao e glamourosa. Mas funciona."</div>
-      </div>
+  <div class="roteiro-completo" style="border-top:3px solid var(--purple)">
+    <div class="roteiro-meta">
+      <span class="meta-formato">Reel 50s</span>
+      <span class="meta-pilar">Visao</span>
+      <span class="meta-tom">Reflexivo (Clovis + Basaglia)</span>
+      <span class="meta-duracao">Selfie-made: noite / fim do dia</span>
+    </div>
+    <div class="roteiro-titulo">"Pra Quem Voce Trabalha?"</div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Gancho</div><div class="bloco-tempo">0-3s</div>
+      <div class="bloco-fala">"Meu filho me perguntou por que eu acordo tao cedo."</div>
+      <div class="bloco-direcao">Fale devagar. Olho na camera. Ambiente calmo, luz baixa.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--accent)">Conflito</div><div class="bloco-tempo">3-15s</div>
+      <div class="bloco-fala">"Eu parei. Pensei. E percebi que nao tinha uma resposta bonita. A verdade e que eu acordo cedo porque se eu nao organizar o meu dia, o dia me organiza. E quando o dia te organiza, voce perde o controle de tudo."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Virada</div><div class="bloco-tempo">15-40s</div>
+      <div class="bloco-fala">"Mas a resposta que eu dei pra ele foi mais simples: 'Porque eu quero que voce veja que as coisas nao acontecem sozinhas. Alguem tem que fazer elas acontecerem. E eu escolhi ser esse alguem.' Proposito nao e uma frase no Instagram. E o que te faz levantar quando tudo pede pra voce ficar."</div>
+      <div class="bloco-direcao">A pausa antes de "Proposito nao e..." e fundamental. Deixe o silencio trabalhar.</div>
+    </div>
+    <div class="roteiro-cta">
+      <div class="cta-label">Chamada</div>
+      <p>Nao peca nada. Feche com a frase e corte. O silencio depois e o CTA mais forte que existe.</p>
     </div>
   </div>
-
-  <div class="bandeira" style="border-left-color:var(--cyan);margin-bottom:24px">
-    <div class="num">FRAMEWORK 05 — LEGENDA INSTAGRAM (Feed/Reel)</div>
-    <h3>GANCHO &#8594; DESENVOLVIMENTO &#8594; CTA</h3>
-    <div style="margin-top:16px;display:grid;gap:12px">
-      <div style="background:var(--surface-2);border-radius:8px;padding:16px">
-        <p style="font-size:0.85rem;color:var(--text)">A legenda complementa o conteudo visual — nao repete.</p>
-        <div style="margin-top:12px;font-size:0.8rem;color:var(--text-muted);font-style:italic">
-          <strong style="color:var(--accent)">Linha 1:</strong> "Eu nao nasci disciplinado. Eu precisei ser."<br><br>
-          <strong style="color:var(--accent)">Corpo:</strong> "Quando meus filhos nasceram, a bagunca deixou de ser opcao. Ai entendi: disciplina nao e sobre fazer mais. E sobre decidir e nao parar. Seu marketing funciona igual."<br><br>
-          <strong style="color:var(--accent)">CTA:</strong> "Salva esse post. Voce vai precisar dele num dia dificil."
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
 
-<div class="footer"><p>Mapa Narrativo v2.0</p></div>
+<!-- ==================== -->
+<!-- FRAMEWORK 2: STORIES -->
+<!-- ==================== -->
+<div class="section">
+  <div class="section-title"><div class="icon icon-amber">&#9899;</div><h2>Framework 02 — Sequencia de Stories</h2><span class="count">3-7 stories</span></div>
+  <p class="section-desc">Stories e o canal mais importante pra voce. E onde a rotina aparece em tempo real. Sem edicao, sem filtro. A sequencia leva o seguidor numa jornada: cena &#8594; contexto &#8594; mensagem &#8594; interacao.</p>
+
+  <div class="bandeira" style="border-left-color:var(--accent)">
+    <div class="num">ESTRUTURA</div>
+    <h3>CENA (1-2) &#8594; CONTEXTO (2-3) &#8594; MENSAGEM (1-2) &#8594; INTERACAO (1)</h3>
+  </div>
+
+  <!-- Roteiro completo Stories -->
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--accent);letter-spacing:2px;margin:24px 0 16px">ROTEIRO COMPLETO — SEQUENCIA ACADEMIA</h3>
+
+  <div class="roteiro-completo" style="border-top:3px solid var(--accent)">
+    <div class="roteiro-meta">
+      <span class="meta-formato">5 Stories</span>
+      <span class="meta-pilar">Rotina &#8594; Metodo</span>
+      <span class="meta-tom">Raw / Sem edicao</span>
+    </div>
+    <div class="roteiro-titulo">"Da Academia pro Marketing"</div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Story 1 — Cena</div>
+      <div class="bloco-fala">Video do espelho da academia. 5h. Escuro la fora. Sem texto, sem fala. So a cena. Opcional: texto pequeno "05:12".</div>
+      <div class="bloco-direcao">Pura ambientacao. O seguidor entende onde voce esta sem voce dizer nada.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Story 2 — Cena</div>
+      <div class="bloco-fala">Selfie rapida pos-serie ou pegando peso. Sem fala. Texto: "Dia 1? Nao. Dia 847." (ou o numero real que for)</div>
+      <div class="bloco-direcao">O numero grande e a prova silenciosa de consistencia. Impacta mais que qualquer frase.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--accent)">Story 3 — Contexto</div>
+      <div class="bloco-fala">[Fale pra camera, 15-20s] "Sabe por que eu to aqui 5h? Nao e motivacao. E porque eu decidi que essa e a primeira coisa que eu faco por mim antes de fazer tudo pelo negocio, pelos filhos, pelos clientes. Se eu nao cuidar de mim primeiro, eu nao consigo cuidar de nada."</div>
+      <div class="bloco-direcao">Tom pessoal. Como se falasse com um amigo no vestiario.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Story 4 — Mensagem (ponte pro marketing)</div>
+      <div class="bloco-fala">[Fale pra camera, 15-20s] "E sabe o que e curioso? Seu marketing funciona igual. Voce nao precisa de um plano genial. Precisa de uma rotina que nao pare. 1 post por semana. Toda semana. Em 3 meses voce vai entender mais do seu cliente do que qualquer curso ensina."</div>
+      <div class="bloco-direcao">Aqui voce conecta rotina pessoal com licao profissional. E a ponte. Fale com naturalidade.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--blue)">Story 5 — Interacao</div>
+      <div class="bloco-fala">Enquete: "Voce tem uma rotina de conteudo?" &#8594; SIM / QUERO COMECAR</div>
+      <div class="bloco-direcao">Quem responde "quero comecar" e lead quente. Responda no DM: "comeca com 1 por semana. Qual dia voce consegue?"</div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--accent);letter-spacing:2px;margin:24px 0 16px">ROTEIRO COMPLETO — SEQUENCIA FILHOS</h3>
+
+  <div class="roteiro-completo" style="border-top:3px solid var(--green)">
+    <div class="roteiro-meta">
+      <span class="meta-formato">4 Stories</span>
+      <span class="meta-pilar">Rotina &#8594; Visao</span>
+      <span class="meta-tom">Acolhedor (Clovis)</span>
+    </div>
+    <div class="roteiro-titulo">"Proposito no Banco de Tras"</div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Story 1 — Cena</div>
+      <div class="bloco-fala">Foto ou video curto do caminho da escola. Mao no volante, mochila no banco, ou o portao da escola. Sem fala. Texto: "07:15 — rotina"</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--accent)">Story 2 — Contexto</div>
+      <div class="bloco-fala">[Fale, 15s] "A gente fala de proposito como se fosse algo distante. O meu ta no banco de tras do carro toda manha. Eu nao nasci disciplinado. Eu precisei ser quando eles chegaram."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Story 3 — Mensagem</div>
+      <div class="bloco-fala">[Fale, 15s] "Se voce tem um motivo forte o suficiente, voce nao precisa de motivacao. Voce precisa de rotina. Pro negocio e a mesma coisa: sabe pra quem voce faz o que faz? Se sabe, o resto e so nao parar."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--blue)">Story 4 — Interacao</div>
+      <div class="bloco-fala">Caixinha de perguntas: "Qual e o SEU motivo pra nao desistir?"</div>
+      <div class="bloco-direcao">As respostas viram conteudo futuro. Reposte as melhores com comentario seu.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== -->
+<!-- FRAMEWORK 3: CARROSSEL -->
+<!-- ==================== -->
+<div class="section">
+  <div class="section-title"><div class="icon icon-green">&#9632;</div><h2>Framework 03 — Carrossel Instagram</h2><span class="count">5-7 slides</span></div>
+  <p class="section-desc">O formato que mais gera salvamento e compartilhamento. Ideal pra conteudo de metodo e descoberta. 1 ideia por slide. Maximo 3 linhas. O visual pode ser simples — o texto precisa ser forte.</p>
+
+  <div class="bandeira" style="border-left-color:var(--green)">
+    <div class="num">ESTRUTURA</div>
+    <h3>CAPA (hook) &#8594; PROBLEMA (dor) &#8594; PASSOS (1 por slide) &#8594; FRASE FINAL &#8594; CTA + @</h3>
+  </div>
+
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--green);letter-spacing:2px;margin:24px 0 16px">ROTEIRO COMPLETO — CARROSSEL</h3>
+
+  <div class="roteiro-completo" style="border-top:3px solid var(--green)">
+    <div class="roteiro-meta">
+      <span class="meta-formato">Carrossel 7 slides</span>
+      <span class="meta-pilar">Metodo + Descoberta</span>
+      <span class="meta-tom">Pratico + Dados</span>
+    </div>
+    <div class="roteiro-titulo">"Por que 1x por semana e melhor que todo dia"</div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Slide 1 — Capa</div>
+      <div class="bloco-fala">"Por que 1 post por semana e melhor que postar todo dia"</div>
+      <div class="bloco-direcao">Fonte grande, contraste alto. Deve funcionar no tamanho de um polegar.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--accent)">Slide 2 — Problema</div>
+      <div class="bloco-fala">"Voce ja comecou a postar, aguentou 2 semanas e parou? Sentiu culpa. Tentou de novo. Parou de novo. O problema nao e voce. E a meta."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Slide 3 — Dado</div>
+      <div class="bloco-fala">"Marcas com cronograma PREVISIVEL tem 23% mais engajamento. Nao e sobre quantidade. E sobre nao sumir. (Fonte: TrackMaven)"</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Slide 4 — Passo 1</div>
+      <div class="bloco-fala">"Escolhe 1 dia da semana. Pode ser qualquer um. Esse e o seu dia de postar. Ponto."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Slide 5 — Passo 2</div>
+      <div class="bloco-fala">"Segue por 12 semanas sem parar. Nesse tempo voce vai descobrir: qual assunto conecta, qual formato funciona, de onde vem seus clientes."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Slide 6 — Frase final</div>
+      <div class="bloco-fala">"A Cimed posta 6x por dia com 20 pessoas. Voce nao e a Cimed. E nao precisa ser. Precisa ser constante."</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--blue)">Slide 7 — CTA</div>
+      <div class="bloco-fala">"Salva esse carrossel. Manda pro amigo empreendedor que se cobra demais. E me segue pra mais conteudo real, sem enrolacao. @seuarroba"</div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--green);letter-spacing:2px;margin:24px 0 16px">MAIS IDEIAS DE CAPA</h3>
+  <div class="gancho-grid">
+    <div class="gancho-item" style="border-color:var(--green)">"3 coisas que a academia me ensinou sobre vender"</div>
+    <div class="gancho-item" style="border-color:var(--green)">"94% dos empreendedores ja passaram por burnout. E a culpa nao e so do trabalho."</div>
+    <div class="gancho-item" style="border-color:var(--green)">"O que ninguem te conta sobre marketing pra pequeno negocio"</div>
+    <div class="gancho-item" style="border-color:var(--green)">"Seu concorrente nao posta melhor. Ele posta sempre."</div>
+    <div class="gancho-item" style="border-color:var(--green)">"Como transformar 5 minutos de gravacao em 10 pecas de conteudo"</div>
+    <div class="gancho-item" style="border-color:var(--green)">"A diferenca entre marketing e spam (e por que voce pode estar fazendo o segundo)"</div>
+  </div>
+</div>
+
+<!-- ==================== -->
+<!-- FRAMEWORK 4: LINKEDIN -->
+<!-- ==================== -->
+<div class="section">
+  <div class="section-title"><div class="icon icon-purple">&#9998;</div><h2>Framework 04 — Texto LinkedIn</h2><span class="count">Narrativo + dados</span></div>
+  <p class="section-desc">LinkedIn premia texto escaneavel: frases curtas, pulo de linha, uma ideia por paragrafo. As 2 primeiras linhas aparecem antes do "ver mais" — precisam ser irresistiveis.</p>
+
+  <div class="bandeira" style="border-left-color:var(--purple)">
+    <div class="num">ESTRUTURA</div>
+    <h3>ABERTURA (2 linhas) &#8594; HISTORIA &#8594; DADO (opcional) &#8594; LICAO &#8594; FECHAMENTO</h3>
+  </div>
+
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--purple);letter-spacing:2px;margin:24px 0 16px">ROTEIRO COMPLETO — LINKEDIN</h3>
+
+  <div class="roteiro-completo" style="border-top:3px solid var(--purple)">
+    <div class="roteiro-meta">
+      <span class="meta-formato">Texto LinkedIn</span>
+      <span class="meta-pilar">Visao + Empatia</span>
+      <span class="meta-tom">Reflexivo (Basaglia)</span>
+    </div>
+    <div class="roteiro-titulo">"Hoje eu quase nao levantei"</div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--red)">Abertura (antes do "ver mais")</div>
+      <div class="bloco-fala">Hoje eu quase nao levantei as 5h.<br>E foi o melhor dia da semana.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--accent)">Historia</div>
+      <div class="bloco-fala">O despertador tocou e meu corpo inteiro pedia pra ficar.<br><br>Chovendo. Frio. Sono.<br><br>Levantei mesmo assim.<br><br>Nao porque sou disciplinado por natureza. Mas porque eu tomei uma decisao ha anos atras e decidi que a decisao vale mais que a vontade do momento.<br><br>Quando cheguei na academia, nao tinha quase ninguem. Como sempre. As 5h e assim — voce fica cara a cara com a sua propria resistencia.</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--green)">Dado + Licao</div>
+      <div class="bloco-fala">Pesquisa da Endeavor mostra que 94% dos empreendedores brasileiros ja sofreram com saude mental. 56% consideram a rotina exaustiva.<br><br>Eu entendo. Eu vivo isso.<br><br>Mas o que me manteve de pe nao foi motivacao. Foi rotina. Uma rotina tao simples que nao da pra usar "nao da tempo" como desculpa.<br><br>A academia as 5h. Filhos na escola as 7h. Trabalho ate a noite. E entre tudo isso, 1 conteudo por dia que mostra o que eu vivo — nao o que eu "ensino".</div>
+    </div>
+    <div class="roteiro-bloco">
+      <div class="bloco-label" style="color:var(--blue)">Fechamento</div>
+      <div class="bloco-fala">Disciplina nao e glamourosa.<br>Nao rende like.<br>Nao viraliza.<br><br>Mas constroi tudo que viralizar nunca vai construir.<br><br>E voce — ta esperando motivacao ou ja decidiu?</div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--purple);letter-spacing:2px;margin:24px 0 16px">MAIS ABERTURAS PRA LINKEDIN</h3>
+  <div class="gancho-grid">
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Historia pessoal</div>"Meu filho me perguntou por que eu acordo tao cedo. Eu nao soube responder na hora."</div>
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Dado chocante</div>"29% dos MEIs fecham em 5 anos. A maioria nao e por produto ruim. E por invisibilidade."</div>
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Desconstrucao</div>"Eu parei de dar dicas de marketing. E meu conteudo finalmente comecou a funcionar."</div>
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Opiniao forte</div>"A maioria dos conselhos de marketing nao serve pra quem empreende de verdade."</div>
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Vulnerabilidade</div>"Ontem eu quis desistir de tudo. Hoje eu gravei 3 conteudos. Os dois dias sao reais."</div>
+    <div class="gancho-item" style="border-color:var(--purple)"><div class="gancho-tipo">Comparacao</div>"A Cimed tem 20 pessoas no marketing. Voce tem voce. E ta tudo bem. Mas voce precisa comecar."</div>
+  </div>
+</div>
+
+<!-- ==================== -->
+<!-- FRAMEWORK 5: LEGENDA -->
+<!-- ==================== -->
+<div class="section">
+  <div class="section-title"><div class="icon icon-cyan">&#9998;</div><h2>Framework 05 — Legenda Instagram</h2><span class="count">Feed + Reel</span></div>
+  <p class="section-desc">A legenda COMPLEMENTA o conteudo visual — nao repete. Se o reel fala de disciplina, a legenda conta o por que. Se o carrossel e metodo, a legenda e a historia por tras.</p>
+
+  <div class="bandeira" style="border-left-color:var(--cyan)">
+    <div class="num">ESTRUTURA</div>
+    <h3>GANCHO (1a linha) &#8594; CORPO (3-5 linhas) &#8594; CTA (1 linha)</h3>
+  </div>
+
+  <h3 style="font-size:0.8rem;font-weight:700;color:var(--cyan);letter-spacing:2px;margin:24px 0 16px">3 LEGENDAS COMPLETAS</h3>
+
+  <div class="roteiro-completo" style="border-top:3px solid var(--cyan)">
+    <div class="roteiro-meta"><span class="meta-pilar">Pro reel "5h da Manha"</span></div>
+    <div class="roteiro-bloco">
+      <div class="bloco-fala">Eu nao nasci disciplinado. Eu precisei ser.<br><br>Quando meus filhos nasceram, a bagunca deixou de ser opcao. Ai entendi: disciplina nao e sobre fazer mais. E sobre decidir e nao parar.<br><br>Seu marketing funciona igual. Nao precisa de plano perfeito. Precisa de uma rotina que nao quebre.<br><br>Salva esse post. Voce vai precisar dele num dia dificil.</div>
+    </div>
+  </div>
+
+  <div class="roteiro-completo" style="border-top:3px solid var(--cyan)">
+    <div class="roteiro-meta"><span class="meta-pilar">Pro carrossel "1x por semana"</span></div>
+    <div class="roteiro-bloco">
+      <div class="bloco-fala">56% dos empreendedores consideram a rotina exaustiva. Se voce e um deles, eu tenho uma noticia: voce nao precisa postar todo dia.<br><br>Precisa postar toda semana. Sem parar. O jogo nao e volume. E consistencia.<br><br>A Cimed posta 6x por dia com 20 pessoas. Voce nao e a Cimed. Mas pode ser mais constante que 90% dos seus concorrentes com 1 post por semana.<br><br>Manda pra aquele amigo que se cobra demais e precisa ouvir isso.</div>
+    </div>
+  </div>
+
+  <div class="roteiro-completo" style="border-top:3px solid var(--cyan)">
+    <div class="roteiro-meta"><span class="meta-pilar">Pro reel "Pra Quem Voce Trabalha"</span></div>
+    <div class="roteiro-bloco">
+      <div class="bloco-fala">A gente fala de proposito como se fosse algo distante. O meu ta no banco de tras do carro toda manha.<br><br>Quando meu filho perguntou por que eu acordo cedo, eu entendi que ele ja estava aprendendo. Nao pelo que eu falo. Pelo que eu faco.<br><br>Empreender e isso: ninguem vai fazer por voce. E quando voce entende PRA QUEM faz, a disciplina vira consequencia.<br><br>Comenta: pra quem voce faz o que faz?</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== -->
+<!-- REGRAS GERAIS -->
+<!-- ==================== -->
+<div class="section">
+  <div class="section-title"><div class="icon icon-amber">&#9888;</div><h2>Regras de Ouro dos Roteiros</h2><span class="count">Valido pra todos os formatos</span></div>
+
+  <div class="cards cols-2">
+    <div class="card accent-red">
+      <div class="card-label">Nunca faca</div>
+      <ul>
+        <li>Comecar com "oi pessoal", "e ai galera"</li>
+        <li>Pedir desculpa por nao ter postado</li>
+        <li>Usar "dica" no titulo ou na fala</li>
+        <li>Copiar tom de guru/coach motivacional</li>
+        <li>Falar de marketing sem conectar com a realidade do empreendedor</li>
+        <li>Usar musica alta que compete com a voz</li>
+        <li>Transicoes, efeitos, filtros de beleza</li>
+      </ul>
+    </div>
+    <div class="card accent-green">
+      <div class="card-label">Sempre faca</div>
+      <ul>
+        <li>Comece com a frase mais forte que voce tem</li>
+        <li>Fale como se fosse 1 pessoa, nao plateia</li>
+        <li>Use dados reais quando confrontar mitos</li>
+        <li>Conecte momento pessoal com licao profissional</li>
+        <li>Mostre que voce vive o que fala (rotina = prova)</li>
+        <li>Legenda com gancho na 1a linha (aparece no feed)</li>
+        <li>Imperfeito publicado > perfeito no rascunho</li>
+      </ul>
+    </div>
+    <div class="card accent-amber">
+      <div class="card-label">Tom por momento do dia</div>
+      <ul>
+        <li><strong>5h Academia:</strong> Firme, direto, confronto (Marsili)</li>
+        <li><strong>7h Filhos:</strong> Vulneravel, proposito (Clovis)</li>
+        <li><strong>Dia Trabalho:</strong> Pratico, metodo (Alfredo)</li>
+        <li><strong>Noite Reflexao:</strong> Maduro, visao (Basaglia)</li>
+      </ul>
+    </div>
+    <div class="card accent-blue">
+      <div class="card-label">Modelos de CTA por objetivo</div>
+      <ul>
+        <li><strong>Salvar:</strong> "Salva esse post. Voce vai precisar."</li>
+        <li><strong>Compartilhar:</strong> "Manda pro amigo que precisa ouvir."</li>
+        <li><strong>Comentar:</strong> "Comenta: voce ja passou por isso?"</li>
+        <li><strong>Seguir:</strong> "Segue pra conteudo sem enrolacao."</li>
+        <li><strong>Silencio:</strong> Frase forte + corte. Sem pedir nada.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="status">5 FRAMEWORKS + 18 GANCHOS + 7 ROTEIROS COMPLETOS</div>
+  <p>Mapa Narrativo v2.0</p>
+</div>
+
 </body></html>
